@@ -12,13 +12,13 @@ public class DriveSubsystem extends SubsystemBase {
     private TalonFX right;
 
     public DriveSubsystem() {
-        left = new TalonFX(Constants.LEFT_DRIVE_TALON);
+        left = new TalonFX(Constants.LEFT_DRIVE_TALON_ID);
         left.configFactoryDefault(Constants.kTalonConfigTimeout);
         left.configAllSettings(Constants.getDriveTalonConfig(), Constants.kTalonConfigTimeout);
         left.enableVoltageCompensation(true);
         left.setNeutralMode(NeutralMode.Brake);
 
-        right = new TalonFX(Constants.RIGHT_DRIVE_TALON);
+        right = new TalonFX(Constants.RIGHT_DRIVE_TALON_ID);
         right.configFactoryDefault(Constants.kTalonConfigTimeout);
         right.configAllSettings(Constants.getDriveTalonConfig(), Constants.kTalonConfigTimeout);
         right.enableVoltageCompensation(true);

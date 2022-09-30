@@ -21,9 +21,14 @@ import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final int LEFT_DRIVE_TALON = 0; // TODO: REPLACE VALUE
-    public static final int RIGHT_DRIVE_TALON = 0; // TODO: REPLACE VALUE
+    public static final int LEFT_DRIVE_TALON_ID = 11; // TODO: REPLACE VALUE
+    public static final int RIGHT_DRIVE_TALON_ID = 12; // TODO: REPLACE VALUE
+    public static final int UPPER_ELEVATOR_TALON_ID = 13; // TODO: REPLACE VALUE
+    public static final int LOWER_ELEVATOR_TALON_ID = 14; // TODO: REPLACE VALUE
 
+    public static final double UPPER_ELEVATOR_SPEED_PCT = 0.5;
+    public static final double LOWER_ELEVATOR_SPEED_PCT = 0.5;
+    
     public static final double DEADBAND = 0.1;
 
     public static final int kTalonConfigTimeout = 10; // ms
