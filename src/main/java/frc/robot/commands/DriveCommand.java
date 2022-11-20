@@ -28,7 +28,7 @@ public class DriveCommand extends CommandBase {
         if (r == 0) {
             return 0;
         }
-        final double PCT = 0.6;
+        final double PCT = 0.8;
         return PCT * (Math.pow(Math.abs(r), 5) * Math.abs(r) / r) + (1 - PCT) * r;
     }
 

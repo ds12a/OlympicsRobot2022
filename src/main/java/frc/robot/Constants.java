@@ -5,7 +5,7 @@
 package frc.robot;
 
 import com.ctre.phoenix.motorcontrol.SupplyCurrentLimitConfiguration;
-import com.ctre.phoenix.motorcontrol.can.TalonFXConfiguration;
+import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
 
 /**
@@ -21,8 +21,8 @@ import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final int LEFT_DRIVE_TALON_ID = 11; // TODO: REPLACE VALUE
-    public static final int RIGHT_DRIVE_TALON_ID = 12; // TODO: REPLACE VALUE
+    public static final int LEFT_DRIVE_TALON_ID = 1     ; // TODO: REPLACE VALUE
+    public static final int RIGHT_DRIVE_TALON_ID = 2; // TODO: REPLACE VALUE
     public static final int UPPER_ELEVATOR_TALON_ID = 13; // TODO: REPLACE VALUE
     public static final int LOWER_ELEVATOR_TALON_ID = 14; // TODO: REPLACE VALUE
 
@@ -33,14 +33,19 @@ public final class Constants {
 
     public static final int kTalonConfigTimeout = 10; // ms
 
+    // Talon SRX Constants
+    public static final int CURRENT_LIMIT = 40;
+    public static final int TRIGGER_THRESHOLD_CURRENT = 45;
+    public static final double TRIGGER_THRESHOLD_TIME = 0.01;
+
     // Drive Falcon Config
-    public static TalonFXConfiguration getDriveTalonConfig() {
-        TalonFXConfiguration driveConfig = new TalonFXConfiguration();
-        driveConfig.supplyCurrLimit.currentLimit = 40;
-        driveConfig.supplyCurrLimit.triggerThresholdCurrent = 45;
-        driveConfig.supplyCurrLimit.triggerThresholdTime = .04;
-        driveConfig.supplyCurrLimit.enable = true;
-        driveConfig.statorCurrLimit.enable = false;
+    public static TalonSRXConfiguration getDriveTalonConfig() {
+        TalonSRXConfiguration driveConfig = new TalonSRXConfiguration();
+        // driveConfig.supplyCurrLimit.currentLimit = 40;
+        // driveConfig.supplyCurrLimit.triggerThresholdCurrent = 45;
+        // driveConfig.supplyCurrLimit.triggerThresholdTime = 0.01;
+        // driveConfig.supplyCurrLimit.enable = true;
+        // driveConfig.statorCurrLimit.enable = false;
         driveConfig.slot0.kP = 0.045;
         driveConfig.slot0.kI = 0.0005;
         driveConfig.slot0.kD = 0.000;

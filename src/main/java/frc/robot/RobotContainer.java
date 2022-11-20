@@ -33,7 +33,7 @@ public class RobotContainer {
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
   private final DriveSubsystem driveSubsystem;
-  private final ElevatorSubsystem elevatorSubsystem;
+  //private final ElevatorSubsystem elevatorSubsystem;
 
   private final XboxController joystick = new XboxController(0);
 
@@ -44,7 +44,7 @@ public class RobotContainer {
     // Configure the button bindings
     configureButtonBindings();
 
-    elevatorSubsystem = new ElevatorSubsystem();
+    // elevatorSubsystem = new ElevatorSubsystem();
     driveSubsystem = new DriveSubsystem();
     driveSubsystem.setDefaultCommand(new DriveCommand(driveSubsystem, joystick));
   }
@@ -58,13 +58,13 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    new JoystickButton(joystick, 1)
-        .whenPressed(new LowerElevatorCommand(elevatorSubsystem, Constants.LOWER_ELEVATOR_SPEED_PCT));
-    new JoystickButton(joystick, 2).whenPressed(new LowerElevatorCommand(elevatorSubsystem, 0));
-    new JoystickButton(joystick, 3)
-        .whenPressed(new UpperElevatorCommand(elevatorSubsystem, Constants.UPPER_ELEVATOR_SPEED_PCT));
-    new JoystickButton(joystick, 4)
-        .whenPressed(new UpperElevatorCommand(elevatorSubsystem, 0));
+    // new JoystickButton(joystick, 1)
+    //     .whenPressed(new LowerElevatorCommand(elevatorSubsystem, Constants.LOWER_ELEVATOR_SPEED_PCT));
+    // new JoystickButton(joystick, 2).whenPressed(new LowerElevatorCommand(elevatorSubsystem, 0));
+    // new JoystickButton(joystick, 3)
+    //     .whenPressed(new UpperElevatorCommand(elevatorSubsystem, Constants.UPPER_ELEVATOR_SPEED_PCT));
+    // new JoystickButton(joystick, 4)
+    //     .whenPressed(new UpperElevatorCommand(elevatorSubsystem, 0));
   }
 
   /**
