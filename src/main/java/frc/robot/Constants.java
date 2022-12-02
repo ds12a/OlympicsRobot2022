@@ -33,6 +33,8 @@ public final class Constants {
 
     public static final int kTalonConfigTimeout = 10; // ms
 
+    public static final double DRIVE_RATE_LIMIT = 0.2; // units per sec
+
     // Talon SRX Constants
     public static final int CURRENT_LIMIT = 40;
     public static final int TRIGGER_THRESHOLD_CURRENT = 45;

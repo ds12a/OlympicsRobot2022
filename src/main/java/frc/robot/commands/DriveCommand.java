@@ -15,8 +15,8 @@ public class DriveCommand extends CommandBase {
     public DriveCommand(DriveSubsystem driveSubsystem, XboxController joystick) {
         this.driveSubsystem = driveSubsystem;
         this.joystick = joystick;
-        this.leftRateLimiter = new SlewRateLimiter(0.5);
-        this.rightRateLimiter = new SlewRateLimiter(0.5);
+        this.leftRateLimiter = new SlewRateLimiter(Constants.DRIVE_RATE_LIMIT);
+        this.rightRateLimiter = new SlewRateLimiter(Constants.DRIVE_RATE_LIMIT);
 
         addRequirements(driveSubsystem);
     }
