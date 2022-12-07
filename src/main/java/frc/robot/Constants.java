@@ -23,17 +23,19 @@ import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
 public final class Constants {
     public static final int LEFT_DRIVE_TALON_ID = 1; 
     public static final int RIGHT_DRIVE_TALON_ID = 2;
-    public static final int UPPER_ELEVATOR_TALON_ID = 13; // TODO: REPLACE VALUE
-    public static final int LOWER_ELEVATOR_TALON_ID = 14; // TODO: REPLACE VALUE
+    public static final int RELEASE_SERVO_PORT = 1; // TODO: REPLACE ME
+
+    public static final double RELEASE_SERVO_MAX = 1.0;
+    public static final double RELEASE_SERVO_MIN = 0.0;
 
     public static final double UPPER_ELEVATOR_SPEED_PCT = 0.5;
     public static final double LOWER_ELEVATOR_SPEED_PCT = 0.5;
     
-    public static final double DEADBAND = 0.1;
+    public static final double DEADBAND = 0.05;
 
     public static final int kTalonConfigTimeout = 10; // ms
 
-    public static final double DRIVE_RATE_LIMIT = 0.2; // units per sec
+    public static final double DRIVE_RATE_LIMIT = 1; // units per sec
 
     // Talon SRX Constants
     public static final int CURRENT_LIMIT = 40;
