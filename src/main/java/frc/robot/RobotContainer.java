@@ -33,7 +33,7 @@ public class RobotContainer {
     private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
     private final DriveSubsystem driveSubsystem;
-    // private final HopperSubsystem hopperSubsystem;
+    private final HopperSubsystem hopperSubsystem;
     // private final ElevatorSubsystem elevatorSubsystem;
 
     private final XboxController joystick = new XboxController(0);
@@ -42,14 +42,16 @@ public class RobotContainer {
      * The container for the robot. Contains subsystems, OI devices, and commands.
      */
     public RobotContainer() {
-        // Configure the button bindings
-        configureButtonBindings();
+        
 
         // elevatorSubsystem = new ElevatorSubsystem();
         driveSubsystem = new DriveSubsystem();
-        // hopperSubsystem = new HopperSubsystem();
+        hopperSubsystem = new HopperSubsystem();
 
         driveSubsystem.setDefaultCommand(new DriveCommand(driveSubsystem, joystick));
+
+        // Configure the button bindings
+        configureButtonBindings();
     }
 
     /**
@@ -71,8 +73,8 @@ public class RobotContainer {
         // Constants.UPPER_ELEVATOR_SPEED_PCT));
         // new JoystickButton(joystick, 4)
         // .whenPressed(new UpperElevatorCommand(elevatorSubsystem, 0));
-        // new JoystickButton(joystick, 5).whenPressed(new HopperCommand(hopperSubsystem, Constants.RELEASE_SERVO_MIN));
-        // new JoystickButton(joystick, 6).whenPressed(new HopperCommand(hopperSubsystem, Constants.RELEASE_SERVO_MAX));
+        new JoystickButton(joystick, 2).whenPressed(new HopperCommand(hopperSubsystem, Constants.RELEASE_SERVO_MIN));
+        new JoystickButton(joystick, 1).whenPressed(new HopperCommand(hopperSubsystem, Constants.RELEASE_SERVO_MAX));
     }
 
     /**

@@ -14,6 +14,6 @@ public class HopperSubsystem extends SubsystemBase {
     }
 
     public void set(double pct) {
-        releaseServo.set(Math.max(Math.min(pct, Constants.RELEASE_SERVO_MAX), Constants.RELEASE_SERVO_MIN));
+        releaseServo.set(pct);
     }
 }
